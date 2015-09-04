@@ -49,7 +49,7 @@
   <li><a href="../classes/DoBlock.html">DoBlock</a></li>
   <li><a href="../classes/DoubleBlock.html">DoubleBlock</a></li>
   <li><a href="../classes/FunctionBlock.html">FunctionBlock</a></li>
-  <li><strong>IfBlock</strong></li>
+  <li><a href="../classes/IfBlock.html">IfBlock</a></li>
   <li><a href="../classes/IfElseBlock.html">IfElseBlock</a></li>
   <li><a href="../classes/InnerMetatableBlock.html">InnerMetatableBlock</a></li>
   <li><a href="../classes/Line.html">Line</a></li>
@@ -59,7 +59,7 @@
   <li><a href="../classes/SpaceBlock.html">SpaceBlock</a></li>
   <li><a href="../classes/TableBlock.html">TableBlock</a></li>
   <li><a href="../classes/LiteralString.html">LiteralString</a></li>
-  <li><a href="../classes/VariableNamer.html">VariableNamer</a></li>
+  <li><strong>VariableNamer</strong></li>
   <li><a href="../classes/Tester.html">Tester</a></li>
   <li><a href="../classes/HashMap.html">HashMap</a></li>
 </ul>
@@ -79,8 +79,8 @@
 
 <div id="content">
 
-<h1>Class <code>IfBlock</code></h1>
-<p>A <a href="../classes/Block.html#">Block</a> for Lua if blocks.</p>
+<h1>Class <code>VariableNamer</code></h1>
+<p>Variable naming for ROBLOX objects.</p>
 <p></p>
     <h3>Info:</h3>
     <ul>
@@ -92,8 +92,8 @@
 <h2><a href="#Methods">Methods</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#IfBlock.new">IfBlock.new (self, condition)</a></td>
-	<td class="summary">Create the if <a href="../classes/Block.html#">Block</a>.</td>
+	<td class="name" nowrap><a href="#VariableNamer.NameObjectVariable">VariableNamer.NameObjectVariable (self, className)</a></td>
+	<td class="summary">Get the next name for a ROBLOX object variable.</td>
 	</tr>
 </table>
 
@@ -105,27 +105,33 @@
 
     <dl class="function">
     <dt>
-    <a name = "IfBlock.new"></a>
-    <strong>IfBlock.new (self, condition)</strong>
+    <a name = "VariableNamer.NameObjectVariable"></a>
+    <strong>VariableNamer.NameObjectVariable (self, className)</strong>
     </dt>
     <dd>
-    Create the if <a href="../classes/Block.html#">Block</a>.
+    Get the next name for a ROBLOX object variable.  The name is
+ in the following form: var(Object ClassName)(Unique ID).
+
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="../classes/IfBlock.html#">IfBlock</a></span>
+            <span class="types"><a class="type" href="../classes/VariableNamer.html#">VariableNamer</a></span>
 
         </li>
-        <li><span class="parameter">condition</span>
+        <li><span class="parameter">className</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The condition statement for the
-	if <a href="../classes/Block.html#">Block</a>.
-
+         The ClassName of the ROBLOX object.
         </li>
     </ul>
 
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The name for the object variable.
+    </ol>
 
 
 

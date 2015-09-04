@@ -38,7 +38,7 @@
 
 <h2>Classes</h2>
 <ul class="$(kind=='Topics' and '' or 'nowrap'">
-  <li><a href="../classes/Stack.html">Stack</a></li>
+  <li><strong>Stack</strong></li>
   <li><a href="../classes/Event.html">Event</a></li>
   <li><a href="../classes/ObjectBuilder.html">ObjectBuilder</a></li>
   <li><a href="../classes/RomlDoc.html">RomlDoc</a></li>
@@ -49,7 +49,7 @@
   <li><a href="../classes/DoBlock.html">DoBlock</a></li>
   <li><a href="../classes/DoubleBlock.html">DoubleBlock</a></li>
   <li><a href="../classes/FunctionBlock.html">FunctionBlock</a></li>
-  <li><strong>IfBlock</strong></li>
+  <li><a href="../classes/IfBlock.html">IfBlock</a></li>
   <li><a href="../classes/IfElseBlock.html">IfElseBlock</a></li>
   <li><a href="../classes/InnerMetatableBlock.html">InnerMetatableBlock</a></li>
   <li><a href="../classes/Line.html">Line</a></li>
@@ -79,8 +79,8 @@
 
 <div id="content">
 
-<h1>Class <code>IfBlock</code></h1>
-<p>A <a href="../classes/Block.html#">Block</a> for Lua if blocks.</p>
+<h1>Class <code>Stack</code></h1>
+<p>A standard Stack data structure.</p>
 <p></p>
     <h3>Info:</h3>
     <ul>
@@ -92,8 +92,21 @@
 <h2><a href="#Methods">Methods</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#IfBlock.new">IfBlock.new (self, condition)</a></td>
-	<td class="summary">Create the if <a href="../classes/Block.html#">Block</a>.</td>
+	<td class="name" nowrap><a href="#Stack.Push">Stack.Push (self, el)</a></td>
+	<td class="summary">Push an element onto the top of the Stack.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Stack.Pop">Stack.Pop (self)</a></td>
+	<td class="summary">Remove an element from the top of the Stack.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Stack.Peek">Stack.Peek (self)</a></td>
+	<td class="summary">Returns the top element from the Stack without removing it.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Stack.IsEmpty">Stack.IsEmpty (self)</a></td>
+	<td class="summary">Returns whether or not the Stack is empty (length of the
+ Stack is 0).</td>
 	</tr>
 </table>
 
@@ -105,27 +118,108 @@
 
     <dl class="function">
     <dt>
-    <a name = "IfBlock.new"></a>
-    <strong>IfBlock.new (self, condition)</strong>
+    <a name = "Stack.Push"></a>
+    <strong>Stack.Push (self, el)</strong>
     </dt>
     <dd>
-    Create the if <a href="../classes/Block.html#">Block</a>.
+    Push an element onto the top of the Stack.
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="../classes/IfBlock.html#">IfBlock</a></span>
+            <span class="types"><a class="type" href="../classes/Stack.html#">Stack</a></span>
 
         </li>
-        <li><span class="parameter">condition</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The condition statement for the
-	if <a href="../classes/Block.html#">Block</a>.
+        <li><span class="parameter">el</span>
+         The element to add.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Stack.Pop"></a>
+    <strong>Stack.Pop (self)</strong>
+    </dt>
+    <dd>
+    Remove an element from the top of the Stack.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="../classes/Stack.html#">Stack</a></span>
 
         </li>
     </ul>
 
+    <h3>Returns:</h3>
+    <ol>
+
+         The top element of the Stack, or nil if the Stack is
+	empty.
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Stack.Peek"></a>
+    <strong>Stack.Peek (self)</strong>
+    </dt>
+    <dd>
+    Returns the top element from the Stack without removing it.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="../classes/Stack.html#">Stack</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+         The top element of the Stack, or nil if the Stack is
+	empty.
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Stack.IsEmpty"></a>
+    <strong>Stack.IsEmpty (self)</strong>
+    </dt>
+    <dd>
+    Returns whether or not the Stack is empty (length of the
+ Stack is 0).
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="../classes/Stack.html#">Stack</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        True if the Stack is empty, false otherwise.
+    </ol>
 
 
 
