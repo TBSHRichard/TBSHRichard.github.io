@@ -30,10 +30,6 @@
   <li><a href="../index.html">Index</a></li>
 </ul>
 
-<h2>Contents</h2>
-<ul>
-<li><a href="#Methods">Methods</a></li>
-</ul>
 
 
 <h2>Classes</h2>
@@ -46,12 +42,12 @@
   <li><a href="../classes/ForBlock.html">ForBlock</a></li>
   <li><a href="../classes/FunctionBlock.html">FunctionBlock</a></li>
   <li><a href="../classes/IfBlock.html">IfBlock</a></li>
-  <li><strong>IfElseBlock</strong></li>
+  <li><a href="../classes/IfElseBlock.html">IfElseBlock</a></li>
   <li><a href="../classes/InnerMetatableBlock.html">InnerMetatableBlock</a></li>
   <li><a href="../classes/Line.html">Line</a></li>
   <li><a href="../classes/MainBlock.html">MainBlock</a></li>
   <li><a href="../classes/MainBlock.html">MainBlock</a></li>
-  <li><a href="../classes/MainRossBlock.html">MainRossBlock</a></li>
+  <li><strong>MainRossBlock</strong></li>
   <li><a href="../classes/MetatableBlock.html">MetatableBlock</a></li>
   <li><a href="../classes/RequireLine.html">RequireLine</a></li>
   <li><a href="../classes/SpaceBlock.html">SpaceBlock</a></li>
@@ -61,7 +57,7 @@
   <li><a href="../classes/LiteralString.html">LiteralString</a></li>
   <li><a href="../classes/VariableNamer.html">VariableNamer</a></li>
   <li><a href="../classes/Stack.html">Stack</a></li>
-  <li><a href="../classes/MainRossBlock.html">MainRossBlock</a></li>
+  <li><strong>MainRossBlock</strong></li>
   <li><a href="../classes/Event.html">Event</a></li>
   <li><a href="../classes/ObjectBuilder.html">ObjectBuilder</a></li>
   <li><a href="../classes/RomlDoc.html">RomlDoc</a></li>
@@ -103,11 +99,12 @@
 
 <div id="content">
 
-<h1>Class <code>IfElseBlock</code></h1>
-<p>A <a href="../classes/DoubleBlock.html#">DoubleBlock</a> for Lua if blocks.</p>
-<p>
-
-</p>
+<h1>Class <code>MainRossBlock</code></h1>
+<p>The base class used for creating custom <a href="../classes/RomlObject.html#">RomlObject</a>s.</p>
+<p> Creating custom objects has been simplified for the purposes
+ of coding them in Lua; they only are simple tables with the
+ specific functions within them. The library creates the
+ sub-class from that (inside ???).</p>
     <h3>Info:</h3>
     <ul>
         <li><strong>License</strong>: MIT</li>
@@ -115,54 +112,11 @@
     </ul>
 
 
-<h2><a href="#Methods">Methods</a></h2>
-<table class="function_list">
-	<tr>
-	<td class="name" nowrap><a href="#IfElseBlock.new">IfElseBlock.new (self, condition)</a></td>
-	<td class="summary">Create the if <a href="../classes/DoubleBlock.html#">DoubleBlock</a>.</td>
-	</tr>
-</table>
 
 <br/>
 <br/>
 
 
-    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
-
-    <dl class="function">
-    <dt>
-    <a name = "IfElseBlock.new"></a>
-    <strong>IfElseBlock.new (self, condition)</strong>
-    </dt>
-    <dd>
-    Create the if <a href="../classes/DoubleBlock.html#">DoubleBlock</a>.
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="../classes/IfElseBlock.html#">IfElseBlock</a></span>
-
-
-
-        </li>
-        <li><span class="parameter">condition</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-<p> The condition statement for the</p>
-<pre><code>if &lt;a href="../classes/Block.html#"&gt;Block&lt;/a&gt;.
-</code></pre>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-</dl>
 
 
 </div> <!-- id="content" -->

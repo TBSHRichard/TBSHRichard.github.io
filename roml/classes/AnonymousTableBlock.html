@@ -30,29 +30,11 @@
   <li><a href="../index.html">Index</a></li>
 </ul>
 
-<h2>Contents</h2>
-<ul>
-<li><a href="#Functions">Functions</a></li>
-</ul>
 
 
-<h2>Modules</h2>
-<ul class="$(kind=='Topics' and '' or 'nowrap'">
-  <li><a href="../modules/File.html">File</a></li>
-  <li><strong>Compiler</strong></li>
-  <li><a href="../modules/CompilerPropertyFilter.html">CompilerPropertyFilter</a></li>
-  <li><a href="../modules/Parser.html">Parser</a></li>
-  <li><a href="../modules/String.html">String</a></li>
-  <li><a href="../modules/Table.html">Table</a></li>
-</ul>
 <h2>Classes</h2>
 <ul class="$(kind=='Topics' and '' or 'nowrap'">
-  <li><a href="../classes/Stack.html">Stack</a></li>
-  <li><a href="../classes/Event.html">Event</a></li>
-  <li><a href="../classes/ObjectBuilder.html">ObjectBuilder</a></li>
-  <li><a href="../classes/RomlDoc.html">RomlDoc</a></li>
-  <li><a href="../classes/RomlObject.html">RomlObject</a></li>
-  <li><a href="../classes/RomlVar.html">RomlVar</a></li>
+  <li><strong>AnonymousTableBlock</strong></li>
   <li><a href="../classes/Block.html">Block</a></li>
   <li><a href="../classes/ConditionalBlock.html">ConditionalBlock</a></li>
   <li><a href="../classes/DoBlock.html">DoBlock</a></li>
@@ -64,14 +46,49 @@
   <li><a href="../classes/InnerMetatableBlock.html">InnerMetatableBlock</a></li>
   <li><a href="../classes/Line.html">Line</a></li>
   <li><a href="../classes/MainBlock.html">MainBlock</a></li>
+  <li><a href="../classes/MainBlock.html">MainBlock</a></li>
+  <li><a href="../classes/MainRossBlock.html">MainRossBlock</a></li>
   <li><a href="../classes/MetatableBlock.html">MetatableBlock</a></li>
   <li><a href="../classes/RequireLine.html">RequireLine</a></li>
   <li><a href="../classes/SpaceBlock.html">SpaceBlock</a></li>
+  <li><a href="../classes/StackBlock.html">StackBlock</a></li>
+  <li><a href="../classes/TableAssignmentBlock.html">TableAssignmentBlock</a></li>
   <li><a href="../classes/TableBlock.html">TableBlock</a></li>
   <li><a href="../classes/LiteralString.html">LiteralString</a></li>
   <li><a href="../classes/VariableNamer.html">VariableNamer</a></li>
+  <li><a href="../classes/Stack.html">Stack</a></li>
+  <li><a href="../classes/MainRossBlock.html">MainRossBlock</a></li>
+  <li><a href="../classes/Event.html">Event</a></li>
+  <li><a href="../classes/ObjectBuilder.html">ObjectBuilder</a></li>
+  <li><a href="../classes/RomlDoc.html">RomlDoc</a></li>
+  <li><a href="../classes/RomlObject.html">RomlObject</a></li>
+  <li><a href="../classes/RomlVar.html">RomlVar</a></li>
+  <li><a href="../classes/RossDoc.html">RossDoc</a></li>
   <li><a href="../classes/Tester.html">Tester</a></li>
   <li><a href="../classes/HashMap.html">HashMap</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../modules/CompilerPropertyFilter.html">CompilerPropertyFilter</a></li>
+  <li><a href="../modules/CustomObject.html">CustomObject</a></li>
+  <li><a href="../modules/SpriteSheet.html">SpriteSheet</a></li>
+  <li><a href="../modules/File.html">File</a></li>
+  <li><a href="../modules/RomlCompiler.html">RomlCompiler</a></li>
+  <li><a href="../modules/RomlParser.html">RomlParser</a></li>
+  <li><a href="../modules/RossCompiler.html">RossCompiler</a></li>
+  <li><a href="../modules/RossParser.html">RossParser</a></li>
+  <li><a href="../modules/Array.html">Array</a></li>
+  <li><a href="../modules/String.html">String</a></li>
+  <li><a href="../modules/Table.html">Table</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/01-Introduction.md.html">01-Introduction</a></li>
+  <li><a href="../topics/02-BasicRoML.md.html">02-BasicRoML</a></li>
+  <li><a href="../topics/03-LibraryCustomObjects.md.html">03-LibraryCustomObjects</a></li>
+  <li><a href="../topics/04-AdvancedRoML.md.html">04-AdvancedRoML</a></li>
+  <li><a href="../topics/05-RoSS.md.html">05-RoSS</a></li>
+  <li><a href="../topics/06-DefiningCustomObjects.md.html">06-DefiningCustomObjects</a></li>
 </ul>
 <h2>Examples</h2>
 <ul class="$(kind=='Topics' and '' or 'nowrap'">
@@ -82,9 +99,9 @@
 
 <div id="content">
 
-<h1>Module <code>Compiler</code></h1>
-<p>The module for compiling Roml parsetrees into Lua files.</p>
-<p></p>
+<h1>Class <code>AnonymousTableBlock</code></h1>
+<p>A table <a href="../classes/Block.html#">Block</a> that is not assigned to any variable.</p>
+<p> Useful to have a table within a <a href="../classes/TableBlock.html#">TableBlock</a>.</p>
     <h3>Info:</h3>
     <ul>
         <li><strong>License</strong>: MIT</li>
@@ -92,60 +109,18 @@
     </ul>
 
 
-<h2><a href="#Functions">Functions</a></h2>
-<table class="function_list">
-	<tr>
-	<td class="name" nowrap><a href="#Compile">Compile (name, parsetree)</a></td>
-	<td class="summary">Compile the parsetree into a Lua string.</td>
-	</tr>
-</table>
 
 <br/>
 <br/>
 
 
-    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
-
-    <dl class="function">
-    <dt>
-    <a name = "Compile"></a>
-    <strong>Compile (name, parsetree)</strong>
-    </dt>
-    <dd>
-    Compile the parsetree into a Lua string.
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The name of the Lua subclass.
-        </li>
-        <li><span class="parameter">parsetree</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-         The parse tree.
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-        The compiled Lua code.
-    </ol>
-
-
-
-
-</dd>
-</dl>
 
 
 </div> <!-- id="content" -->
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
-<i style="float:right;">Last updated 2015-09-14 15:10:36 </i>
+<i style="float:right;">Last updated 2016-07-26 16:42:24 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

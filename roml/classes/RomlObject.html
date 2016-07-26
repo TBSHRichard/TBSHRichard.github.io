@@ -38,12 +38,7 @@
 
 <h2>Classes</h2>
 <ul class="$(kind=='Topics' and '' or 'nowrap'">
-  <li><a href="../classes/Stack.html">Stack</a></li>
-  <li><a href="../classes/Event.html">Event</a></li>
-  <li><a href="../classes/ObjectBuilder.html">ObjectBuilder</a></li>
-  <li><a href="../classes/RomlDoc.html">RomlDoc</a></li>
-  <li><strong>RomlObject</strong></li>
-  <li><a href="../classes/RomlVar.html">RomlVar</a></li>
+  <li><a href="../classes/AnonymousTableBlock.html">AnonymousTableBlock</a></li>
   <li><a href="../classes/Block.html">Block</a></li>
   <li><a href="../classes/ConditionalBlock.html">ConditionalBlock</a></li>
   <li><a href="../classes/DoBlock.html">DoBlock</a></li>
@@ -55,23 +50,49 @@
   <li><a href="../classes/InnerMetatableBlock.html">InnerMetatableBlock</a></li>
   <li><a href="../classes/Line.html">Line</a></li>
   <li><a href="../classes/MainBlock.html">MainBlock</a></li>
+  <li><a href="../classes/MainBlock.html">MainBlock</a></li>
+  <li><a href="../classes/MainRossBlock.html">MainRossBlock</a></li>
   <li><a href="../classes/MetatableBlock.html">MetatableBlock</a></li>
   <li><a href="../classes/RequireLine.html">RequireLine</a></li>
   <li><a href="../classes/SpaceBlock.html">SpaceBlock</a></li>
+  <li><a href="../classes/StackBlock.html">StackBlock</a></li>
+  <li><a href="../classes/TableAssignmentBlock.html">TableAssignmentBlock</a></li>
   <li><a href="../classes/TableBlock.html">TableBlock</a></li>
   <li><a href="../classes/LiteralString.html">LiteralString</a></li>
   <li><a href="../classes/VariableNamer.html">VariableNamer</a></li>
+  <li><a href="../classes/Stack.html">Stack</a></li>
+  <li><a href="../classes/MainRossBlock.html">MainRossBlock</a></li>
+  <li><a href="../classes/Event.html">Event</a></li>
+  <li><a href="../classes/ObjectBuilder.html">ObjectBuilder</a></li>
+  <li><a href="../classes/RomlDoc.html">RomlDoc</a></li>
+  <li><strong>RomlObject</strong></li>
+  <li><a href="../classes/RomlVar.html">RomlVar</a></li>
+  <li><a href="../classes/RossDoc.html">RossDoc</a></li>
   <li><a href="../classes/Tester.html">Tester</a></li>
   <li><a href="../classes/HashMap.html">HashMap</a></li>
 </ul>
 <h2>Modules</h2>
 <ul class="$(kind=='Topics' and '' or 'nowrap'">
-  <li><a href="../modules/File.html">File</a></li>
-  <li><a href="../modules/Compiler.html">Compiler</a></li>
   <li><a href="../modules/CompilerPropertyFilter.html">CompilerPropertyFilter</a></li>
-  <li><a href="../modules/Parser.html">Parser</a></li>
+  <li><a href="../modules/CustomObject.html">CustomObject</a></li>
+  <li><a href="../modules/SpriteSheet.html">SpriteSheet</a></li>
+  <li><a href="../modules/File.html">File</a></li>
+  <li><a href="../modules/RomlCompiler.html">RomlCompiler</a></li>
+  <li><a href="../modules/RomlParser.html">RomlParser</a></li>
+  <li><a href="../modules/RossCompiler.html">RossCompiler</a></li>
+  <li><a href="../modules/RossParser.html">RossParser</a></li>
+  <li><a href="../modules/Array.html">Array</a></li>
   <li><a href="../modules/String.html">String</a></li>
   <li><a href="../modules/Table.html">Table</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/01-Introduction.md.html">01-Introduction</a></li>
+  <li><a href="../topics/02-BasicRoML.md.html">02-BasicRoML</a></li>
+  <li><a href="../topics/03-LibraryCustomObjects.md.html">03-LibraryCustomObjects</a></li>
+  <li><a href="../topics/04-AdvancedRoML.md.html">04-AdvancedRoML</a></li>
+  <li><a href="../topics/05-RoSS.md.html">05-RoSS</a></li>
+  <li><a href="../topics/06-DefiningCustomObjects.md.html">06-DefiningCustomObjects</a></li>
 </ul>
 <h2>Examples</h2>
 <ul class="$(kind=='Topics' and '' or 'nowrap'">
@@ -85,7 +106,9 @@
 <h1>Class <code>RomlObject</code></h1>
 <p>A wrapper for ROBLOX objects that contains methods for
  finding objects within the hierarchy.</p>
-<p></p>
+<p>
+
+</p>
     <h3>Info:</h3>
     <ul>
         <li><strong>License</strong>: MIT</li>
@@ -96,7 +119,7 @@
 <h2><a href="#Methods">Methods</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#RomlObject.new">RomlObject.new (self, object[, classes={}])</a></td>
+	<td class="name" nowrap><a href="#RomlObject.new">RomlObject.new (self, romlDoc, object, objectId[, classes={}])</a></td>
 	<td class="summary">Create a new RomlObject.</td>
 	</tr>
 	<tr>
@@ -106,13 +129,26 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#RomlObject.GetRobloxObject">RomlObject.GetRobloxObject (self)</a></td>
-	<td class="summary"></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#RomlObject.ObjectName">RomlObject.ObjectName (self)</a></td>
+	<td class="summary">
+
+</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#RomlObject.Refresh">RomlObject.Refresh (self)</a></td>
 	<td class="summary">Sets the properties of the RomlObject to its associated
  ROBLOX object, sending the properties through any filters if
  necessary.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#RomlObject.StyleObject">RomlObject.StyleObject (self, properties)</a></td>
+	<td class="summary">Changes the properties of the wrapped ROBLOX object without
+ changing the inline properties of this object.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#RomlObject.AddChild">RomlObject.AddChild (self, child)</a></td>
@@ -124,7 +160,9 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#RomlObject.SetClasses">RomlObject.SetClasses (self, classes)</a></td>
-	<td class="summary"></td>
+	<td class="summary">
+
+</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#RomlObject.RemoveAllChildren">RomlObject.RemoveAllChildren (self)</a></td>
@@ -132,11 +170,41 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#RomlObject.GetId">RomlObject.GetId (self)</a></td>
-	<td class="summary"></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#RomlObject.GetObjectId">RomlObject.GetObjectId (self)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#RomlObject.GetClasses">RomlObject.GetClasses (self)</a></td>
+	<td class="summary">
+
+</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#RomlObject.RemoveChild">RomlObject.RemoveChild (self, child)</a></td>
 	<td class="summary">Remove the provided child from the list of children.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#RomlObject.HasClass">RomlObject.HasClass (self, className)</a></td>
+	<td class="summary">Returns whether or not this RoML Object has the given
+ class or not.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#RomlObject.MatchesSelector">RomlObject.MatchesSelector (self, selectorStack)</a></td>
+	<td class="summary">Returns whether or not this RoML Object matches the given
+ <a href="../classes/Stack.html#">Stack</a> of selectors.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#RomlObject.AllowsChildren">RomlObject.AllowsChildren (self)</a></td>
+	<td class="summary">
+
+</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#RomlObject.Find">RomlObject.Find (self, selector)</a></td>
@@ -154,7 +222,7 @@
     <dl class="function">
     <dt>
     <a name = "RomlObject.new"></a>
-    <strong>RomlObject.new (self, object[, classes={}])</strong>
+    <strong>RomlObject.new (self, romlDoc, object, objectId[, classes={}])</strong>
     </dt>
     <dd>
     Create a new RomlObject.
@@ -165,16 +233,33 @@
         <li><span class="parameter">self</span>
             <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
 
+
+
+        </li>
+        <li><span class="parameter">romlDoc</span>
+            <span class="types"><a class="type" href="../classes/RomlDoc.html#">RomlDoc</a></span>
+         The <a href="../classes/RomlDoc.html#">RomlDoc</a> this object belongs
+  to.
         </li>
         <li><span class="parameter">object</span>
             <span class="types"><span class="type">Instance</span></span>
-         The ROBLOX Instance to wrap with this
-	RomlObject.
+
+<p> The ROBLOX Instance to wrap with this</p>
+<pre><code>RomlObject.
+</code></pre>
+
+        </li>
+        <li><span class="parameter">objectId</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The ID assigned to this object.
         </li>
         <li><span class="parameter">classes</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-         The list of classes for the
- 	RomlObject.
+
+<p> The list of classes for the</p>
+<pre><code>RomlObject.
+</code></pre>
+
 
          (<em>default</em> {})
         </li>
@@ -199,6 +284,8 @@
         <li><span class="parameter">self</span>
             <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
 
+
+
         </li>
         <li><span class="parameter">parent</span>
             <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
@@ -210,8 +297,11 @@
     <ol>
 
            <span class="types"><span class="type">Instance</span></span>
-         The ROBLOX object wrapped by this
-	RomlObject.
+
+<p> The ROBLOX object wrapped by this</p>
+<pre><code>RomlObject.
+</code></pre>
+
 
     </ol>
 
@@ -227,10 +317,53 @@
 
 
 
+
+
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">self</span>
             <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><span class="type">Instance</span></span>
+
+<p> The ROBLOX object wrapped by this</p>
+<pre><code>RomlObject.
+</code></pre>
+
+</li>
+        <li>
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The name of this object.</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "RomlObject.ObjectName"></a>
+    <strong>RomlObject.ObjectName (self)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
+
+
 
         </li>
     </ul>
@@ -238,10 +371,8 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><span class="type">Instance</span></span>
-         The ROBLOX object wrapped by this
-	RomlObject.
-
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The name of this object.
     </ol>
 
 
@@ -263,6 +394,37 @@
         <li><span class="parameter">self</span>
             <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
 
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "RomlObject.StyleObject"></a>
+    <strong>RomlObject.StyleObject (self, properties)</strong>
+    </dt>
+    <dd>
+    Changes the properties of the wrapped ROBLOX object without
+ changing the inline properties of this object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
+
+
+
+        </li>
+        <li><span class="parameter">properties</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The list of properties to set on
+  the ROBLOX object.
         </li>
     </ul>
 
@@ -276,13 +438,16 @@
     <strong>RomlObject.AddChild (self, child)</strong>
     </dt>
     <dd>
-    Add a child RomlObject to this RomlObject.
+    Add a child RomlObject to this RomlObject.  Throws an error if
+ this RomlObject does not allow children.
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">self</span>
             <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
+
+
 
         </li>
         <li><span class="parameter">child</span>
@@ -305,11 +470,12 @@
  object is not updated until <a href="../classes/RomlObject.html#RomlObject.Refresh">Refresh</a> is called.
 
 
-
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">self</span>
             <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
+
+
 
         </li>
         <li><span class="parameter">properties</span>
@@ -331,10 +497,14 @@
 
 
 
+
+
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">self</span>
             <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
+
+
 
         </li>
         <li><span class="parameter">classes</span>
@@ -361,6 +531,8 @@
         <li><span class="parameter">self</span>
             <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
 
+
+
         </li>
     </ul>
 
@@ -383,10 +555,84 @@
 
 
 
+
+
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">self</span>
             <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><span class="type">integer</span></span>
+        The unique identifier for this RomlObject.</li>
+        <li>
+           <span class="types"><span class="type">integer</span></span>
+         The named identifier for the RomlObject as
+  defined in the RomlDoc.</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "RomlObject.GetObjectId"></a>
+    <strong>RomlObject.GetObjectId (self)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><span class="type">integer</span></span>
+         The named identifier for the RomlObject as
+  defined in the RomlDoc.</li>
+        <li>
+           <span class="types"><span class="type">The</span></span>
+        style classes of this RomlObject.</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "RomlObject.GetClasses"></a>
+    <strong>RomlObject.GetClasses (self)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
+
+
 
         </li>
     </ul>
@@ -394,8 +640,8 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><span class="type">integer</span></span>
-        The unique identifier for this RomlObject.
+           <span class="types"><span class="type">The</span></span>
+        style classes of this RomlObject.
     </ol>
 
 
@@ -415,6 +661,8 @@
         <li><span class="parameter">self</span>
             <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
 
+
+
         </li>
         <li><span class="parameter">child</span>
             <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
@@ -422,6 +670,116 @@
         </li>
     </ul>
 
+
+
+
+
+</dd>
+    <dt>
+    <a name = "RomlObject.HasClass"></a>
+    <strong>RomlObject.HasClass (self, className)</strong>
+    </dt>
+    <dd>
+    Returns whether or not this RoML Object has the given
+ class or not.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
+
+
+
+        </li>
+        <li><span class="parameter">className</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The class to look for.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+         True if this RomlObject has the class, false
+  if it does not.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "RomlObject.MatchesSelector"></a>
+    <strong>RomlObject.MatchesSelector (self, selectorStack)</strong>
+    </dt>
+    <dd>
+    Returns whether or not this RoML Object matches the given
+ <a href="../classes/Stack.html#">Stack</a> of selectors.  Each element of the <a href="../classes/Stack.html#">Stack</a> should
+ be a simple table with a object key, a id or class key, or
+ both.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
+
+
+
+        </li>
+        <li><span class="parameter">selectorStack</span>
+            <span class="types"><a class="type" href="../classes/Stack.html#">Stack</a></span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><span class="type">bool</span></span>
+         True if the entire <a href="../classes/Stack.html#">Stack</a> matches this
+  specific <a href="../classes/RomlObject.html#">RomlObject</a>, false otherwise.</li>
+        <li>
+           <span class="types"><span class="type">bool</span></span>
+         Whether or not this RomlObject can have
+  children RomlObjects.</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "RomlObject.AllowsChildren"></a>
+    <strong>RomlObject.AllowsChildren (self)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+         Whether or not this RomlObject can have
+  children RomlObjects.
+    </ol>
 
 
 
@@ -440,6 +798,8 @@
     <ul>
         <li><span class="parameter">self</span>
             <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
+
+
 
         </li>
         <li><span class="parameter">selector</span>
@@ -466,7 +826,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
-<i style="float:right;">Last updated 2015-09-14 15:10:36 </i>
+<i style="float:right;">Last updated 2016-07-26 16:42:24 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

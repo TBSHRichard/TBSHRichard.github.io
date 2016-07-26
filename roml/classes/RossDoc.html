@@ -46,7 +46,7 @@
   <li><a href="../classes/ForBlock.html">ForBlock</a></li>
   <li><a href="../classes/FunctionBlock.html">FunctionBlock</a></li>
   <li><a href="../classes/IfBlock.html">IfBlock</a></li>
-  <li><strong>IfElseBlock</strong></li>
+  <li><a href="../classes/IfElseBlock.html">IfElseBlock</a></li>
   <li><a href="../classes/InnerMetatableBlock.html">InnerMetatableBlock</a></li>
   <li><a href="../classes/Line.html">Line</a></li>
   <li><a href="../classes/MainBlock.html">MainBlock</a></li>
@@ -67,7 +67,7 @@
   <li><a href="../classes/RomlDoc.html">RomlDoc</a></li>
   <li><a href="../classes/RomlObject.html">RomlObject</a></li>
   <li><a href="../classes/RomlVar.html">RomlVar</a></li>
-  <li><a href="../classes/RossDoc.html">RossDoc</a></li>
+  <li><strong>RossDoc</strong></li>
   <li><a href="../classes/Tester.html">Tester</a></li>
   <li><a href="../classes/HashMap.html">HashMap</a></li>
 </ul>
@@ -103,11 +103,11 @@
 
 <div id="content">
 
-<h1>Class <code>IfElseBlock</code></h1>
-<p>A <a href="../classes/DoubleBlock.html#">DoubleBlock</a> for Lua if blocks.</p>
-<p>
-
-</p>
+<h1>Class <code>RossDoc</code></h1>
+<p>The base class for RoSS object creation.</p>
+<p> All compiled RoSS
+ files will be compiled into a Lua class with this class as
+ its base.</p>
     <h3>Info:</h3>
     <ul>
         <li><strong>License</strong>: MIT</li>
@@ -118,8 +118,13 @@
 <h2><a href="#Methods">Methods</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#IfElseBlock.new">IfElseBlock.new (self, condition)</a></td>
-	<td class="summary">Create the if <a href="../classes/DoubleBlock.html#">DoubleBlock</a>.</td>
+	<td class="name" nowrap><a href="#RossDoc.new">RossDoc.new (self)</a></td>
+	<td class="summary">Create a new RossDoc.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#RossDoc.StyleObject">RossDoc.StyleObject (self, romlObject)</a></td>
+	<td class="summary">Styles a <a href="../classes/RomlObject.html#">RomlObject</a> based on the rules within this
+ <a href="../classes/RossDoc.html#">RossDoc</a>.</td>
 	</tr>
 </table>
 
@@ -131,29 +136,48 @@
 
     <dl class="function">
     <dt>
-    <a name = "IfElseBlock.new"></a>
-    <strong>IfElseBlock.new (self, condition)</strong>
+    <a name = "RossDoc.new"></a>
+    <strong>RossDoc.new (self)</strong>
     </dt>
     <dd>
-    Create the if <a href="../classes/DoubleBlock.html#">DoubleBlock</a>.
+    Create a new RossDoc.
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="../classes/IfElseBlock.html#">IfElseBlock</a></span>
+            <span class="types"><a class="type" href="../classes/RossDoc.html#">RossDoc</a></span>
 
 
 
         </li>
-        <li><span class="parameter">condition</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-<p> The condition statement for the</p>
-<pre><code>if &lt;a href="../classes/Block.html#"&gt;Block&lt;/a&gt;.
-</code></pre>
+    </ul>
 
 
+
+
+
+</dd>
+    <dt>
+    <a name = "RossDoc.StyleObject"></a>
+    <strong>RossDoc.StyleObject (self, romlObject)</strong>
+    </dt>
+    <dd>
+    Styles a <a href="../classes/RomlObject.html#">RomlObject</a> based on the rules within this
+ <a href="../classes/RossDoc.html#">RossDoc</a>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="../classes/RossDoc.html#">RossDoc</a></span>
+
+
+
+        </li>
+        <li><span class="parameter">romlObject</span>
+            <span class="types"><a class="type" href="../classes/RomlObject.html#">RomlObject</a></span>
+         The <a href="../classes/RomlObject.html#">RomlObject</a> to style.
         </li>
     </ul>
 

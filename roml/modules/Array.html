@@ -41,12 +41,12 @@
   <li><a href="../modules/CompilerPropertyFilter.html">CompilerPropertyFilter</a></li>
   <li><a href="../modules/CustomObject.html">CustomObject</a></li>
   <li><a href="../modules/SpriteSheet.html">SpriteSheet</a></li>
-  <li><strong>File</strong></li>
+  <li><a href="../modules/File.html">File</a></li>
   <li><a href="../modules/RomlCompiler.html">RomlCompiler</a></li>
   <li><a href="../modules/RomlParser.html">RomlParser</a></li>
   <li><a href="../modules/RossCompiler.html">RossCompiler</a></li>
   <li><a href="../modules/RossParser.html">RossParser</a></li>
-  <li><a href="../modules/Array.html">Array</a></li>
+  <li><strong>Array</strong></li>
   <li><a href="../modules/String.html">String</a></li>
   <li><a href="../modules/Table.html">Table</a></li>
 </ul>
@@ -103,8 +103,8 @@
 
 <div id="content">
 
-<h1>Module <code>File</code></h1>
-<p>Contains helper methods for file reading and writing.</p>
+<h1>Module <code>Array</code></h1>
+<p>A module with helper functions related to array style tables.</p>
 <p>
 
 </p>
@@ -118,9 +118,29 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#FileToString">FileToString (path)</a></td>
-	<td class="summary">Reads the contents of a file and places them inside of
- string, which is returned.</td>
+	<td class="name" nowrap><a href="#InsertionSort">InsertionSort (array, comparisonFn)</a></td>
+	<td class="summary">Perform an insertion sort on the array.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Merge">Merge (left, right, comparisonFn)</a></td>
+	<td class="summary">The merge operation of the merge sort; merges two halves of
+ an array into one.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ComparisonOrder">ComparisonOrder ()</a></td>
+	<td class="summary">An enum type that allows for default sorting functions in
+ the <a href="../modules/Array.html#StableSort">StableSort</a> if the user doesn't one to define their
+ own.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#StableSort">StableSort (array[, comparisonFn=ComparisonOrder.Ascending])</a></td>
+	<td class="summary">Sort an array, making sure the order of elements with the
+ same sorting value appear in the same order they were in
+ before.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Reverse">Reverse (array)</a></td>
+	<td class="summary">Reverses the order of the elements in an array.</td>
 	</tr>
 </table>
 
@@ -132,28 +152,145 @@
 
     <dl class="function">
     <dt>
-    <a name = "FileToString"></a>
-    <strong>FileToString (path)</strong>
+    <a name = "InsertionSort"></a>
+    <strong>InsertionSort (array, comparisonFn)</strong>
     </dt>
     <dd>
-    Reads the contents of a file and places them inside of
- string, which is returned.
+    Perform an insertion sort on the array.
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">path</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The path to the file.
+        <li><span class="parameter">array</span>
+            <span class="types"><span class="type">array</span></span>
+         The array to be sorted.
+        </li>
+        <li><span class="parameter">comparisonFn</span>
+            <span class="types"><span class="type">function</span></span>
+         The function to compare any
+  two elements in the array. Parameters are the left and right
+  side.
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-        The contents of the file.
+           <span class="types"><span class="type">array</span></span>
+        The sorted array.
     </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Merge"></a>
+    <strong>Merge (left, right, comparisonFn)</strong>
+    </dt>
+    <dd>
+    The merge operation of the merge sort; merges two halves of
+ an array into one.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">left</span>
+            <span class="types"><span class="type">array</span></span>
+         The left half of the array.
+        </li>
+        <li><span class="parameter">right</span>
+            <span class="types"><span class="type">array</span></span>
+         The right half of the array.
+        </li>
+        <li><span class="parameter">comparisonFn</span>
+            <span class="types"><span class="type">function</span></span>
+         The function to compare any
+  two elements in the array. Parameters are the left and right
+  side.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">array</span></span>
+        The merged array.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ComparisonOrder"></a>
+    <strong>ComparisonOrder ()</strong>
+    </dt>
+    <dd>
+    An enum type that allows for default sorting functions in
+ the <a href="../modules/Array.html#StableSort">StableSort</a> if the user doesn't one to define their
+ own.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "StableSort"></a>
+    <strong>StableSort (array[, comparisonFn=ComparisonOrder.Ascending])</strong>
+    </dt>
+    <dd>
+    Sort an array, making sure the order of elements with the
+ same sorting value appear in the same order they were in
+ before.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">array</span>
+            <span class="types"><span class="type">array</span></span>
+         The array to sort
+        </li>
+        <li><span class="parameter">comparisonFn</span>
+            <span class="types"><span class="type">function/ComparisonOrder</span></span>
+          The function to compare any two elements in the array.
+  Parameters are the left and right side. May also use
+  <a href="../modules/Array.html#ComparisonOrder">ComparisonOrder</a> to use on of the default comparison
+  functions.
+         (<em>default</em> ComparisonOrder.Ascending)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">array</span></span>
+        The sorted array.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Reverse"></a>
+    <strong>Reverse (array)</strong>
+    </dt>
+    <dd>
+    Reverses the order of the elements in an array.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">array</span>
+            <span class="types"><span class="type">array</span></span>
+         The array to reverse.
+        </li>
+    </ul>
+
 
 
 

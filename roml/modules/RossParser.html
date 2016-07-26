@@ -38,35 +38,61 @@
 
 <h2>Modules</h2>
 <ul class="$(kind=='Topics' and '' or 'nowrap'">
-  <li><a href="../modules/File.html">File</a></li>
-  <li><a href="../modules/Compiler.html">Compiler</a></li>
   <li><a href="../modules/CompilerPropertyFilter.html">CompilerPropertyFilter</a></li>
-  <li><strong>NameObjectVariable</strong></li>
+  <li><a href="../modules/CustomObject.html">CustomObject</a></li>
+  <li><a href="../modules/SpriteSheet.html">SpriteSheet</a></li>
+  <li><a href="../modules/File.html">File</a></li>
+  <li><a href="../modules/RomlCompiler.html">RomlCompiler</a></li>
+  <li><a href="../modules/RomlParser.html">RomlParser</a></li>
+  <li><a href="../modules/RossCompiler.html">RossCompiler</a></li>
+  <li><strong>RossParser</strong></li>
+  <li><a href="../modules/Array.html">Array</a></li>
+  <li><a href="../modules/String.html">String</a></li>
   <li><a href="../modules/Table.html">Table</a></li>
 </ul>
 <h2>Classes</h2>
 <ul class="$(kind=='Topics' and '' or 'nowrap'">
-  <li><a href="../classes/Event.html">Event</a></li>
-  <li><a href="../classes/ObjectBuilder.html">ObjectBuilder</a></li>
-  <li><a href="../classes/RomlDoc.html">RomlDoc</a></li>
-  <li><a href="../classes/RomlObject.html">RomlObject</a></li>
-  <li><a href="../classes/RomlVar.html">RomlVar</a></li>
+  <li><a href="../classes/AnonymousTableBlock.html">AnonymousTableBlock</a></li>
   <li><a href="../classes/Block.html">Block</a></li>
+  <li><a href="../classes/ConditionalBlock.html">ConditionalBlock</a></li>
   <li><a href="../classes/DoBlock.html">DoBlock</a></li>
   <li><a href="../classes/DoubleBlock.html">DoubleBlock</a></li>
+  <li><a href="../classes/ForBlock.html">ForBlock</a></li>
   <li><a href="../classes/FunctionBlock.html">FunctionBlock</a></li>
   <li><a href="../classes/IfBlock.html">IfBlock</a></li>
   <li><a href="../classes/IfElseBlock.html">IfElseBlock</a></li>
   <li><a href="../classes/InnerMetatableBlock.html">InnerMetatableBlock</a></li>
   <li><a href="../classes/Line.html">Line</a></li>
   <li><a href="../classes/MainBlock.html">MainBlock</a></li>
+  <li><a href="../classes/MainBlock.html">MainBlock</a></li>
+  <li><a href="../classes/MainRossBlock.html">MainRossBlock</a></li>
   <li><a href="../classes/MetatableBlock.html">MetatableBlock</a></li>
   <li><a href="../classes/RequireLine.html">RequireLine</a></li>
   <li><a href="../classes/SpaceBlock.html">SpaceBlock</a></li>
+  <li><a href="../classes/StackBlock.html">StackBlock</a></li>
+  <li><a href="../classes/TableAssignmentBlock.html">TableAssignmentBlock</a></li>
   <li><a href="../classes/TableBlock.html">TableBlock</a></li>
   <li><a href="../classes/LiteralString.html">LiteralString</a></li>
+  <li><a href="../classes/VariableNamer.html">VariableNamer</a></li>
+  <li><a href="../classes/Stack.html">Stack</a></li>
+  <li><a href="../classes/MainRossBlock.html">MainRossBlock</a></li>
+  <li><a href="../classes/Event.html">Event</a></li>
+  <li><a href="../classes/ObjectBuilder.html">ObjectBuilder</a></li>
+  <li><a href="../classes/RomlDoc.html">RomlDoc</a></li>
+  <li><a href="../classes/RomlObject.html">RomlObject</a></li>
+  <li><a href="../classes/RomlVar.html">RomlVar</a></li>
+  <li><a href="../classes/RossDoc.html">RossDoc</a></li>
   <li><a href="../classes/Tester.html">Tester</a></li>
   <li><a href="../classes/HashMap.html">HashMap</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/01-Introduction.md.html">01-Introduction</a></li>
+  <li><a href="../topics/02-BasicRoML.md.html">02-BasicRoML</a></li>
+  <li><a href="../topics/03-LibraryCustomObjects.md.html">03-LibraryCustomObjects</a></li>
+  <li><a href="../topics/04-AdvancedRoML.md.html">04-AdvancedRoML</a></li>
+  <li><a href="../topics/05-RoSS.md.html">05-RoSS</a></li>
+  <li><a href="../topics/06-DefiningCustomObjects.md.html">06-DefiningCustomObjects</a></li>
 </ul>
 <h2>Examples</h2>
 <ul class="$(kind=='Topics' and '' or 'nowrap'">
@@ -77,9 +103,11 @@
 
 <div id="content">
 
-<h1>Module <code>NameObjectVariable</code></h1>
-<p>Module for variable naming for ROBLOX objects.</p>
-<p></p>
+<h1>Module <code>RossParser</code></h1>
+<p>A module with helper functions related to parsing of RoSS.</p>
+<p>
+
+</p>
     <h3>Info:</h3>
     <ul>
         <li><strong>License</strong>: MIT</li>
@@ -90,8 +118,9 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#NameObjectVariable">NameObjectVariable (className)</a></td>
-	<td class="summary">Get the next name for a ROBLOX object variable.</td>
+	<td class="name" nowrap><a href="#Parse">Parse (ross)</a></td>
+	<td class="summary">Parses a RoSS string into a parse tree to be sent to the
+ <a href="../modules/RossCompiler.html#">RossCompiler</a>.</td>
 	</tr>
 </table>
 
@@ -103,28 +132,27 @@
 
     <dl class="function">
     <dt>
-    <a name = "NameObjectVariable"></a>
-    <strong>NameObjectVariable (className)</strong>
+    <a name = "Parse"></a>
+    <strong>Parse (ross)</strong>
     </dt>
     <dd>
-    Get the next name for a ROBLOX object variable.  The name is
- in the following form: var(Object ClassName)(Unique ID).
-
+    Parses a RoSS string into a parse tree to be sent to the
+ <a href="../modules/RossCompiler.html#">RossCompiler</a>.
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">className</span>
+        <li><span class="parameter">ross</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The ClassName of the ROBLOX object.
+         The RoSS string.
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-        The name for the object variable.
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The parse tree.
     </ol>
 
 
@@ -138,7 +166,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
-<i style="float:right;">Last updated 2015-07-29 13:46:39 </i>
+<i style="float:right;">Last updated 2016-07-26 16:42:24 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

@@ -46,7 +46,7 @@
   <li><a href="../classes/ForBlock.html">ForBlock</a></li>
   <li><a href="../classes/FunctionBlock.html">FunctionBlock</a></li>
   <li><a href="../classes/IfBlock.html">IfBlock</a></li>
-  <li><strong>IfElseBlock</strong></li>
+  <li><a href="../classes/IfElseBlock.html">IfElseBlock</a></li>
   <li><a href="../classes/InnerMetatableBlock.html">InnerMetatableBlock</a></li>
   <li><a href="../classes/Line.html">Line</a></li>
   <li><a href="../classes/MainBlock.html">MainBlock</a></li>
@@ -56,7 +56,7 @@
   <li><a href="../classes/RequireLine.html">RequireLine</a></li>
   <li><a href="../classes/SpaceBlock.html">SpaceBlock</a></li>
   <li><a href="../classes/StackBlock.html">StackBlock</a></li>
-  <li><a href="../classes/TableAssignmentBlock.html">TableAssignmentBlock</a></li>
+  <li><strong>TableAssignmentBlock</strong></li>
   <li><a href="../classes/TableBlock.html">TableBlock</a></li>
   <li><a href="../classes/LiteralString.html">LiteralString</a></li>
   <li><a href="../classes/VariableNamer.html">VariableNamer</a></li>
@@ -103,8 +103,9 @@
 
 <div id="content">
 
-<h1>Class <code>IfElseBlock</code></h1>
-<p>A <a href="../classes/DoubleBlock.html#">DoubleBlock</a> for Lua if blocks.</p>
+<h1>Class <code>TableAssignmentBlock</code></h1>
+<p>A <a href="../classes/Block.html#">Block</a> that is similar to to <a href="../classes/TableBlock.html#">TableBlock</a> but assigns
+ the table to a table key instead of a local variable.</p>
 <p>
 
 </p>
@@ -118,8 +119,8 @@
 <h2><a href="#Methods">Methods</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#IfElseBlock.new">IfElseBlock.new (self, condition)</a></td>
-	<td class="summary">Create the if <a href="../classes/DoubleBlock.html#">DoubleBlock</a>.</td>
+	<td class="name" nowrap><a href="#TableAssignmentBlock.new">TableAssignmentBlock.new (self, name, key)</a></td>
+	<td class="summary">Create the TableAssignmentBlock.</td>
 	</tr>
 </table>
 
@@ -131,29 +132,29 @@
 
     <dl class="function">
     <dt>
-    <a name = "IfElseBlock.new"></a>
-    <strong>IfElseBlock.new (self, condition)</strong>
+    <a name = "TableAssignmentBlock.new"></a>
+    <strong>TableAssignmentBlock.new (self, name, key)</strong>
     </dt>
     <dd>
-    Create the if <a href="../classes/DoubleBlock.html#">DoubleBlock</a>.
+    Create the TableAssignmentBlock.
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="../classes/IfElseBlock.html#">IfElseBlock</a></span>
+            <span class="types"><a class="type" href="../classes/TableAssignmentBlock.html#">TableAssignmentBlock</a></span>
 
 
 
         </li>
-        <li><span class="parameter">condition</span>
+        <li><span class="parameter">name</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-<p> The condition statement for the</p>
-<pre><code>if &lt;a href="../classes/Block.html#"&gt;Block&lt;/a&gt;.
-</code></pre>
-
-
+         The name of the table variable that this
+  table is assigned to.
+        </li>
+        <li><span class="parameter">key</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The key of the table to assign to.
         </li>
     </ul>
 
